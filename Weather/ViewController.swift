@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                 do {
                     try session.updateApplicationContext(["temperature" : temperature])
                 } catch {
-                    print("Ошибка отправки контекста на часы!  \(error)")
+                    print("Ошибка отправки контекста на часы!  \(error.localizedDescription)")
                 }
             }
         }
