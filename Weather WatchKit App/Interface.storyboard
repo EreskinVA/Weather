@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Weather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" spacing="4" id="22s-Q5-SHX">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="22°" id="cmi-6L-t1t">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" weight="medium" pointSize="28"/>
+                                    </variation>
+                                </label>
+                                <group alignment="center" layout="vertical" id="0na-Ps-EKX">
+                                    <items>
+                                        <label alignment="left" text="Feels like 24°" id="Kfo-AK-5bf">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <label alignment="left" text="3 km/h NE" id="0ht-uM-Bfk">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <variation key="device=watch42mm" spacing="8"/>
+                        </group>
+                        <imageView alignment="center" image="Cloudy" id="8ab-Dt-YwA"/>
+                        <label alignment="center" text="Cloudy" id="mYc-nd-xVj"/>
+                        <separator alignment="left" id="hy0-wc-acO">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" alignment="center" id="FBL-uv-Ugi">
+                            <items>
+                                <button alignment="left" id="ch1-Px-qKh">
+                                    <group key="contentGroup" width="0.33300000000000002" alignment="left" id="e4A-bN-daO">
+                                        <items>
+                                            <label alignment="left" numberOfLines="2" id="2CO-LD-amE">
+                                                <string key="text">1PM
+22°</string>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="shortTernWeather1" destination="AgC-eL-Hgc" id="myb-Mp-1cp"/>
+                                    </connections>
+                                </button>
+                                <button alignment="left" id="zEr-DH-VEc">
+                                    <group key="contentGroup" width="0.33300000000000002" alignment="left" id="IUX-ip-5AJ">
+                                        <items>
+                                            <label alignment="left" numberOfLines="2" id="Ntu-Fg-kGz">
+                                                <string key="text">1PM
+22°</string>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="shorttermWeather2" destination="AgC-eL-Hgc" id="bvY-Bk-jTg"/>
+                                    </connections>
+                                </button>
+                                <button alignment="left" id="IFR-1c-pWw">
+                                    <group key="contentGroup" width="0.33300000000000002" alignment="left" id="6Zp-hn-lTL">
+                                        <items>
+                                            <label alignment="left" numberOfLines="2" id="ftV-9p-KxI">
+                                                <string key="text">1PM
+22°</string>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="shorttermWeather3" destination="AgC-eL-Hgc" id="uZ2-Bd-BWU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Wn8-az-b7b">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <table alignment="left" id="xT7-z4-zTU">
+                            <items>
+                                <tableRow identifier="LongTermForeCastRow" id="3K4-dW-JVg" customClass="LongTermForecastRowController" customModule="Weather_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="rUc-H1-TY1">
+                                        <items>
+                                            <imageView width="29" height="29" alignment="right" verticalAlignment="center" image="Sunny" id="BA4-bd-WyB"/>
+                                            <group width="1" widthAdjustment="-32" alignment="left" layout="vertical" spacing="0.0" id="W20-gN-2xk">
+                                                <items>
+                                                    <group width="1" widthAdjustment="-12" alignment="left" id="hnn-Jj-22X">
+                                                        <items>
+                                                            <label alignment="left" text="Mon" id="avC-gC-rte"/>
+                                                            <label alignment="right" text="22°" id="Rjb-lY-OKJ"/>
+                                                        </items>
+                                                        <variation key="device=watch42mm" widthAdjustment="-20"/>
+                                                    </group>
+                                                    <label alignment="left" text="Sunny" id="741-fT-ydK"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="conditionsImage" destination="BA4-bd-WyB" id="dmi-za-IwV"/>
+                                        <outlet property="conditionsLabel" destination="741-fT-ydK" id="IlT-VD-mua"/>
+                                        <outlet property="dateLabel" destination="avC-gC-rte" id="YEu-Wu-9Hd"/>
+                                        <outlet property="temperatureLabel" destination="Rjb-lY-OKJ" id="wx7-J6-GMy"/>
+                                        <segue destination="s29-D9-qdf" kind="push" identifier="WeatherDetailSegue" id="THV-s8-Jlt"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="KHk-3Y-vI8">
+                        <items>
+                            <menuItem title="Metric" image="units-metric" id="AJj-sZ-xEE">
+                                <connections>
+                                    <action selector="switchToMetric" destination="AgC-eL-Hgc" id="pCR-Fx-b9v"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="US Customary" image="units-uscustomary" id="gIY-ww-qmD">
+                                <connections>
+                                    <action selector="switchToUSCustomary" destination="AgC-eL-Hgc" id="8hr-zc-teZ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="conditionsImage" destination="8ab-Dt-YwA" id="96s-pH-Jza"/>
+                        <outlet property="conditionsLabel" destination="mYc-nd-xVj" id="75f-gl-ar9"/>
+                        <outlet property="feelsLikeLabel" destination="Kfo-AK-5bf" id="cca-uU-UtS"/>
+                        <outlet property="longTermForecastTable" destination="xT7-z4-zTU" id="J9c-Zf-Q7O"/>
+                        <outlet property="shortTermsForecastLabel1" destination="2CO-LD-amE" id="QDG-Hc-RK0"/>
+                        <outlet property="shortTermsForecastLabel2" destination="Ntu-Fg-kGz" id="PRZ-PZ-MET"/>
+                        <outlet property="shortTermsForecastLabel3" destination="ftV-9p-KxI" id="g5L-Is-LeG"/>
+                        <outlet property="temperatureLabel" destination="cmi-6L-t1t" id="QOa-Lf-FvC"/>
+                        <outlet property="windSpeedLabel" destination="0ht-uM-Bfk" id="oaP-Ol-Q3A"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--WeatherDetailsInterface-->
+        <scene sceneID="fD0-s4-oge">
+            <objects>
+                <controller identifier="WeatherDetailsInterface" id="s29-D9-qdf" customClass="WeatherDetailsInterfaceController" customModule="Weather_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Date/Time" id="soi-LB-nK2">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <group width="1" alignment="left" id="jxR-sP-hHN">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="22°" id="AK7-b5-e6G">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" weight="medium" pointSize="28"/>
+                                    </variation>
+                                </label>
+                                <imageView alignment="center" image="Cloudy" id="tqS-9R-tJn"/>
+                            </items>
+                        </group>
+                        <label alignment="center" text="Cloudy" id="QGf-Am-u0W"/>
+                        <label alignment="center" text="Feels like 24°" id="bnn-ZQ-cOQ">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="center" text="3 km/h NE" id="MPS-fY-qf9"/>
+                        <separator alignment="left" id="S6w-qd-yrm">
+                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" alignment="left" id="PCy-uu-kGV">
+                            <items>
+                                <group width="0.45000000000000001" alignment="left" layout="vertical" id="odR-KR-fo4">
+                                    <items>
+                                        <label alignment="center" text="High" id="4O1-tt-6rd">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <label alignment="center" text="Low" id="MEu-v9-6v9">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="0.45000000000000001" alignment="right" layout="vertical" id="9nN-h2-2Yi">
+                                    <items>
+                                        <label alignment="center" text="123°" id="Vbf-lk-9fD">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <label alignment="center" text="123°" id="c0A-HX-e3P">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="conditionImage" destination="tqS-9R-tJn" id="WPA-eY-u8g"/>
+                        <outlet property="conditionLabel" destination="QGf-Am-u0W" id="lSt-Jx-aaD"/>
+                        <outlet property="feelsLikeLabel" destination="bnn-ZQ-cOQ" id="gwT-wg-DsW"/>
+                        <outlet property="highTemperatureLabel" destination="Vbf-lk-9fD" id="TVd-K0-oyn"/>
+                        <outlet property="intervalLabel" destination="soi-LB-nK2" id="yNx-vg-aWV"/>
+                        <outlet property="lowTemperatureLabel" destination="c0A-HX-e3P" id="IP0-My-nJb"/>
+                        <outlet property="temperatureLabel" destination="AK7-b5-e6G" id="r2c-Ka-Fec"/>
+                        <outlet property="windLabel" destination="MPS-fY-qf9" id="CTe-Ky-nss"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="481" y="116"/>
+        </scene>
+    </scenes>
+</document>
